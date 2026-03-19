@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ========== Left Panel ========== */
+.left-panel {
+    flex: 1;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.brand {
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+}
+
+.logo {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.brand h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* Decorative circles */
+.decorative-circles {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.circle-1 {
+    width: 300px;
+    height: 300px;
+    top: -80px;
+    left: -80px;
+}
+
+.circle-2 {
+    width: 200px;
+    height: 200px;
+    bottom: -50px;
+    right: -50px;
+}
+
+.circle-3 {
+    width: 150px;
+    height: 150px;
+    bottom: 30%;
+    left: 10%;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+/* ========== Right Panel ========== */
+.right-panel {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f0f2f5;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 420px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.login-box h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 2rem;
+}
+
+/* ========== Form Styles ========== */
+.input-group {
+    margin-bottom: 1.25rem;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: #9ca3af;
+    pointer-events: none;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 0.8rem 0.8rem 0.8rem 2.8rem;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: #1f2937;
+    background: #fafafa;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.input-wrapper input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+    background: #fff;
+}
+
+.input-wrapper input::placeholder {
+    color: #b0b7c3;
+}
+
+/* ========== Options Row ========== */
+.options-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: #6b7280;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #667eea;
+    cursor: pointer;
+}
+
+.forgot-link {
+    font-size: 0.85rem;
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.forgot-link:hover {
+    color: #764ba2;
+}
+
+/* ========== Login Button ========== */
+.btn-login {
+    width: 100%;
+    padding: 0.85rem;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.btn-login:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-login:active {
+    transform: translateY(0);
+}
+
+/* ========== Divider ========== */
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #e5e7eb;
+}
+
+.divider span {
+    padding: 0 1rem;
+    font-size: 0.8rem;
+    color: #9ca3af;
+    white-space: nowrap;
+}
+
+/* ========== Social Buttons ========== */
+.social-login {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-social {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.7rem;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 10px;
+    background: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-family: inherit;
+    color: #374151;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.btn-social:hover {
+    border-color: #667eea;
+    background: #f9fafb;
+}
+
+/* ========== Sign Up Text ========== */
+.signup-text {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+.signup-text a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.signup-text a:hover {
+    color: #764ba2;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-panel {
+        padding: 2.5rem 2rem;
+        min-height: 200px;
+    }
+
+    .brand h1 {
+        font-size: 1.75rem;
+    }
+
+    .tagline {
+        font-size: 0.95rem;
+    }
+
+    .right-panel {
+        padding: 1.5rem;
+    }
+
+    .login-box {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .left-panel {
+        min-height: 160px;
+        padding: 2rem 1.5rem;
+    }
+
+    .brand h1 {
+        font-size: 1.5rem;
+    }
+
+    .login-box {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .social-login {
+        flex-direction: column;
+    }
+}
